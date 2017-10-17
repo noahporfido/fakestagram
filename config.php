@@ -20,7 +20,7 @@ return array(
 
     // Datebankkonfiguration
     'database' => array(
-        'host'     => 'localhost',
+        'host'     => 'localhost:3307',
         'username' => 'root',
         'password' => '',
         'database' => 'fakestagram',
