@@ -1,2 +1,3 @@
-Hallo Welt!
-Ich heisse NOah
+<div id="StartseiteContainer">
+    <p id="StartseiteText">fakestagram</p>
+</div>

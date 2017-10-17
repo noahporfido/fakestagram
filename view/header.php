@@ -17,7 +17,3 @@
             <input id="suchenfeld">
         </div>
     </div>
-
-        <h1>
-            <?= $heading ?>
-        </h1>
