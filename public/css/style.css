@@ -10,14 +10,34 @@ body {
 }
 
 #suche {
-    width: 10em;
+    margin-top: 1.5em;
+    width: 30em;
     margin-left: auto;
     margin-right: auto;
 }
 
 #navigation {
-    background-color: lightgray;
+    background-color: white;
     height: 5em;
+    padding-top: 1px;
+    border-width: thin;
+    box-shadow: 0 0 1em gray;
+}
+
+#profil {
+    width: 5em;
+    float: right;
+    margin-right: 2em;
+}
+
+#suchenfeld {
+    width: 30em;
+    height: 1.3em;
+    font-size: 1em;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
 }
 
 #footer {
