@@ -1,5 +1,23 @@
 body {
-  padding-top: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 5em;
+    float: left;
+    margin-left: 2em;
+}
+
+#suche {
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navigation {
+    background-color: lightgray;
+    height: 5em;
 }
 
 #footer {
