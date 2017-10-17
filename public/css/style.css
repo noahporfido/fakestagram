@@ -54,7 +54,42 @@ body {
 }
 
 #StartseiteContainer {
+    margin-top: 100px;
     height: 400px;
-    background-color: green;
+    text-align: center;
+}
+
+#BenutzernameInput {
+    font-weight: bold;
+}
+
+#PasswortInput {
+    font-weight: bold;
+}
+
+#LoginButton {
+    background-color: transparent;
+    margin-top: 30px;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#LoginButton:hover {
+    background-color: black;
+    transition-duration: 0.6s;
+    color: white;
+}
+
+#BenutzernameLabel {
+    border-radius: 5px;
+    border-color: black;
+    text-align: center;
+}
+
+#PasswortLabel {
+        border-radius: 5px;
+    border-color: black;
     text-align: center;
 }
