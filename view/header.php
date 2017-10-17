@@ -10,13 +10,15 @@
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
 </head>
 
 <body>
     <div id="navigation">
         <img src="images/logo.png" id="logo">
         <img src="images/profil.png" id="profil">
+        <img src="images/upload.png" id="upload">
         <div id="suche">
-            <input id="suchenfeld" >
+            <input id="suchenfeld" placeholder="Suchen">
         </div>
     </div>
