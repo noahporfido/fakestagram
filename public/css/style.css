@@ -39,3 +39,22 @@ body {
 *{
     font-family: 'Raleway', sans-serif;
 }
+
+#footer {
+    height: 20px;
+    background-color: aqua;
+}
+
+#footerText {
+    text-align: center;
+}
+
+#StartseiteText {
+    font-size: 60px;
+}
+
+#StartseiteContainer {
+    height: 400px;
+    background-color: green;
+    text-align: center;
+}
