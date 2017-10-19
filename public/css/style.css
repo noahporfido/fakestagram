@@ -48,17 +48,18 @@ body {
 }
 
 #footer {
-    height: 200px;
+    height: 250px;
     position: absolute;
     width: 100%;
-        background-image: url(../images/footer.png);
+    background-image: url(../images/footer.png);
     background-size: cover;
     background-position: middle top;
+    bottom: 0;
 }
 
 #footerText {
     text-align: center;
-    margin-top: 9em;
+    margin-top: 12em;
     color: white;
 }
 
@@ -91,7 +92,7 @@ body {
 
 #LoginButton:hover {
     background-color: black;
-    transition-duration: 0.6s;
+    transition-duration: 0.3s;
     color: white;
 }
 
