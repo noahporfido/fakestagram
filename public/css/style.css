@@ -116,14 +116,15 @@ body {
 
 #logo_schrift_div {
     float: left;
-    width: 20em;
+    width: 10em;
     height: 3em;
-    margin-left: 2em;
+    margin-top: 0.5em;
+    margin-left: 1em;
 }
 
 #logo_schrift {
     font-family: 'Pacifico', cursive;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0;
     font-weight: normal;
 }
