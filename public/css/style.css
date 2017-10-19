@@ -48,12 +48,18 @@ body {
 }
 
 #footer {
-    height: 20px;
-    background-color: aqua;
+    height: 200px;
+    position: absolute;
+    width: 100%;
+        background-image: url(../images/footer.png);
+    background-size: cover;
+    background-position: middle top;
 }
 
 #footerText {
     text-align: center;
+    margin-top: 9em;
+    color: white;
 }
 
 #StartseiteText {
@@ -61,8 +67,43 @@ body {
 }
 
 #StartseiteContainer {
+    margin-top: 100px;
     height: 400px;
-    background-color: green;
+    text-align: center;
+}
+
+#BenutzernameInput {
+    font-weight: bold;
+}
+
+#PasswortInput {
+    font-weight: bold;
+}
+
+#LoginButton {
+    background-color: transparent;
+    margin-top: 30px;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#LoginButton:hover {
+    background-color: black;
+    transition-duration: 0.6s;
+    color: white;
+}
+
+#BenutzernameLabel {
+    border-radius: 5px;
+    border-color: black;
+    text-align: center;
+}
+
+#PasswortLabel {
+        border-radius: 5px;
+    border-color: black;
     text-align: center;
 }
 
@@ -85,4 +126,8 @@ body {
     font-size: 2.5em;
     margin: 0;
     font-weight: normal;
+}
+
+input,button {
+ border-style: solid;   
 }
