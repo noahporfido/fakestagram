@@ -45,12 +45,18 @@ body {
 }
 
 #footer {
-    height: 20px;
-    background-color: aqua;
+    height: 200px;
+    position: absolute;
+    width: 100%;
+        background-image: url(../images/footer.png);
+    background-size: cover;
+    background-position: middle top;
 }
 
 #footerText {
     text-align: center;
+    margin-top: 9em;
+    color: white;
 }
 
 #StartseiteText {
@@ -103,4 +109,8 @@ body {
     width: 3em;
     margin-top: 1em;
     margin-right: 2em;
+}
+
+input,button {
+ border-style: solid;   
 }

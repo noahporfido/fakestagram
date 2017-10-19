@@ -7,5 +7,4 @@
     <input id="PasswortLabel" type="password" placeholder="Enter Password" name="psw" required>
     <br/>
     <button id="LoginButton" type="submit">Login</button>
-    <input type="checkbox" checked="checked"> Remember me
 </div>
