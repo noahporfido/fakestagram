@@ -4,9 +4,15 @@
 
     <?php
             foreach($bilder as $bild){
-                echo "<div id='s$bild->id' class='bilder'></div>";
+                echo "<div id='element$bild->id' class='bilder'>
+                        <div id='option$bild->id' class='option'>
+                            <div class='edit'></div>
+                            <div class='ansehen'></div>
+                            <div class='delete'></div>
+                        </div>
+                    </div>";
                 echo "<style type='text/css'>";
-                echo "#s$bild->id {
+                echo "#element$bild->id {
                     background-image: url('/uploadimages/$bild->bild'); 
                 }</style>";
             }
