@@ -133,3 +133,7 @@ body {
 input,button {
  border-style: solid;   
 }
+
+.bilder{
+    width: 40em;
+}

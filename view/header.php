@@ -16,12 +16,12 @@
 
 <body>
     <div id="navigation">
-        <img src="images/logo.png" id="logo">
+        <img src="/images/logo.png" id="logo">
         <div id="logo_schrift_div">
             <h3 id="logo_schrift">Fakestagram</h3>
         </div>
-        <img src="images/profil.png" id="profil">
-        <img src="images/upload.svg" id="upload">
+        <img src="/images/profil.png" id="profil">
+        <img src="/images/upload.svg" id="upload">
         <div id="suche">
             <input id="suchenfeld" placeholder="Suchen">
         </div>
