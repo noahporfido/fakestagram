@@ -50,4 +50,12 @@ class UserController
         // Anfrage an die URI /user weiterleiten (HTTP 302)
         header('Location: /user');
     }
+    
+    public function edit()
+    {
+        $view = new View('image_edit');
+        $view->title = 'Bild Bearbeiten';
+        $view->heading = 'Bild Bearbeiten';
+        $view->display();
+    }
 }
