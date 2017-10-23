@@ -8,7 +8,7 @@
 				onclick="removePlaceholder(this)"> <br> <input type=text
 				id="inputBeschreibung" placeholder="Beschreibung"
 				onclick="removePlaceholder(this)"> <br> <input type=image
-				id="inputBild"> <br> <input type=submit id="inputPosten">
+				id="inputBild" value = "Bild hinzufügen (Durchsuchen)"> <br> <input type=submit id="inputPosten" value ="Posten">
 		</form>
 	</div>
 </div>
