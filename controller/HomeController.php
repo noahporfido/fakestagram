@@ -46,4 +46,12 @@ class HomeController
         $view->bilder = $bilderRepository->readAll();
         $view->display();
     }
+    
+    public function delete(){
+        $bilderRepository = new BilderRepository();
+        
+        $id = $_POST('elementid');
+        $bilderRepository->deleteById($id);
+        
+    }
 }
