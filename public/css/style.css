@@ -48,8 +48,8 @@ body {
 }
 
 #footer {
-    height: 250px;
-    position: absolute;
+    height: 150px;
+    position: fixed;
     width: 100%;
     background-image: url(../images/footer.png);
     background-size: cover;
@@ -59,7 +59,7 @@ body {
 
 #footerText {
     text-align: center;
-    margin-top: 12em;
+    margin-top: 7em;
     color: white;
 }
 
@@ -134,9 +134,55 @@ input,button {
  border-style: solid;   
 }
 
-.bilder{
-    width: 40em;
+<<<<<<< HEAD
+#inputName {
+	 border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    margin-bottom: 20px;
 }
+#inputBeschreibung{
+	 border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#inputPosten{
+	background-color: transparent;
+    margin-top: 30px;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#inputPosten:hover{
+	   background-color: black;
+    transition-duration: 0.3s;
+    color: white;
+}
+#textHinzufuegen{
+	 font-size: 60px;
+}
+=======
+.bilder{
+    width: 38em;
+    height: 38em;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    margin: 1em;
+}
+
+#galerie {
+    text-align: center;
+}
+
+#galerie_h1 {
+    font-weight: 100;
+}
+<<<<<<< HEAD
 
 #Editbar {
     height: 5em;
@@ -209,3 +255,6 @@ form * {
 }
 
 
+=======
+>>>>>>> 55e24c7cd7b4db8f079f195ed1cceef21ddb7021
+>>>>>>> 97a0a5f8fd04983c81a4c45ce93b417d59f69010
