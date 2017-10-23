@@ -134,6 +134,38 @@ input,button {
  border-style: solid;   
 }
 
+<<<<<<< HEAD
+#inputName {
+	 border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#inputBeschreibung{
+	 border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#inputPosten{
+	background-color: transparent;
+    margin-top: 30px;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#inputPosten:hover{
+	   background-color: black;
+    transition-duration: 0.3s;
+    color: white;
+}
+#textHinzufuegen{
+	 font-size: 60px;
+}
+=======
 .bilder{
     width: 38em;
     height: 38em;
@@ -150,3 +182,4 @@ input,button {
 #galerie_h1 {
     font-weight: 100;
 }
+>>>>>>> 55e24c7cd7b4db8f079f195ed1cceef21ddb7021
