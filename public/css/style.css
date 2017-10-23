@@ -180,16 +180,23 @@ input,button {
 }
 
 #EditField {
+    width: 60em;
     margin-top: 2em;
     height: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
 }
 
 .BildEdit {
+    margin-top: 1em;
     height: 30em;
     width: 30em;
     margin-left: 10%;
     float: left;
     border:black solid 2px;
+    border-radius: 10px;
+    z-index: 2;
 }
 
 form * {
@@ -204,6 +211,8 @@ form * {
     max-width: 20em;
     min-height: 10em;
     min-width: 10em;
+    border: black solid 2px;
+    border-radius: 5px;
 }
 
 #SaveInput:hover {
@@ -219,7 +228,6 @@ form * {
     width: 10em;
     height: 4em;
     border-radius: 5px;
-    float: left;
 }
 
 #DeleteInput {
@@ -237,4 +245,11 @@ form * {
     color: white;
 }
 
+<<<<<<< HEAD
+#NameInput {
+    border-radius: 5px;
+    height: 2em;
+}
+=======
 
+>>>>>>> 1b481d7a352e9e636a2aa7944a227dad5ce1c258
