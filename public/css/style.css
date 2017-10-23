@@ -49,7 +49,7 @@ body {
 
 #footer {
     height: 150px;
-    position: fixed;
+    position: absolute;
     width: 100%;
     background-image: url(../images/footer.png);
     background-size: cover;
@@ -134,7 +134,7 @@ input,button {
  border-style: solid;   
 }
 
-<<<<<<< HEAD
+
 #inputName {
 	 border-radius: 5px;
     border-color: black;
@@ -166,39 +166,6 @@ input,button {
 	 font-size: 60px;
 }
 
-.bilder{
-    width: 38em;
-    height: 38em;
-    float: left;
-    background-size: cover;
-    background-position: center center;
-    margin: 0.5em;
-}
-
-#galerie {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 117em;
-}
-
-@media (max-width: 117em){
-    #galerie{
-        width: 78em;
-    }
-}
-
-@media (max-width: 78em){
-    #galerie{
-        width: 39em;
-    }
-}
-
-#galerie_h1 {
-    font-weight: 100;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 #Editbar {
     height: 5em;
@@ -278,7 +245,11 @@ form * {
     color: white;
 }
 
+<<<<<<< HEAD
 #NameInput {
     border-radius: 5px;
     height: 2em;
 }
+=======
+
+>>>>>>> 1b481d7a352e9e636a2aa7944a227dad5ce1c258

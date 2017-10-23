@@ -8,6 +8,8 @@
     </title>
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/celine.css" rel="stylesheet">
+    <link href="/css/home.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
