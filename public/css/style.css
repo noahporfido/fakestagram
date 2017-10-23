@@ -43,7 +43,7 @@ body {
     border-width: thin;
 }
 
-*{
+* {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 #PasswortLabel {
-        border-radius: 5px;
+    border-radius: 5px;
     border-color: black;
     text-align: center;
 }
@@ -130,26 +130,28 @@ body {
     font-weight: normal;
 }
 
-input,button {
- border-style: solid;   
+input,
+button {
+    border-style: solid;
 }
 
 
 #inputName {
-	 border-radius: 5px;
-    border-color: black;
-    text-align: center;
-    margin-bottom: 20px;
-}
-#inputBeschreibung{
-	 border-radius: 5px;
+    border-radius: 5px;
     border-color: black;
     text-align: center;
     margin-bottom: 20px;
 }
 
-#inputPosten{
-	background-color: transparent;
+#inputBeschreibung {
+    border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#inputPosten {
+    background-color: transparent;
     margin-top: 30px;
     border-color: black;
     width: 150px;
@@ -157,13 +159,14 @@ input,button {
     border-radius: 5px;
 }
 
-#inputPosten:hover{
-	   background-color: black;
+#inputPosten:hover {
+    background-color: black;
     transition-duration: 0.3s;
     color: white;
 }
-#textHinzufuegen{
-	 font-size: 60px;
+
+#textHinzufuegen {
+    font-size: 60px;
 }
 
 
@@ -180,16 +183,22 @@ input,button {
 }
 
 #EditField {
+    width: 60em;
     margin-top: 2em;
     height: 30em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .BildEdit {
+    background-size: cover;
+    margin-top: 1em;
     height: 30em;
     width: 30em;
     margin-left: 10%;
     float: left;
-    border:black solid 2px;
+    border: black solid 2px;
+    border-radius: 10px;
 }
 
 form * {
@@ -204,6 +213,8 @@ form * {
     max-width: 20em;
     min-height: 10em;
     min-width: 10em;
+    border: black solid 2px;
+    border-radius: 5px;
 }
 
 #SaveInput:hover {
@@ -219,11 +230,10 @@ form * {
     width: 10em;
     height: 4em;
     border-radius: 5px;
-    float: left;
 }
 
 #DeleteInput {
-     background-color: transparent;
+    background-color: transparent;
     margin-top: 30px;
     border-color: black;
     width: 10em;
@@ -237,4 +247,7 @@ form * {
     color: white;
 }
 
-
+#NameInput {
+    border-radius: 5px;
+    height: 1em;
+}
