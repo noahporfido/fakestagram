@@ -86,4 +86,11 @@ class View
         require $this->viewfile;
         require './../view/footer.php';
     }
+    
+    public function displayfrontpage()
+    {
+        extract($this->properties);
+        require $this->viewfile;
+        require './../view/footer.php';
+    }
 }

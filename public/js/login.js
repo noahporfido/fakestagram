@@ -1,7 +1,10 @@
-
-function removePlaceholder(this)
+function Placeholder(id)
 {
-    
-    alert("hallo");
-this.removeAttr('placeholder');
+    document.getElementById(id).removeAttribute('placeholder');
+}
+
+
+function Placeholderadd(id)
+{
+    document.getElementById(id).placeholder = "Enter Username";
 }
