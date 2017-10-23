@@ -137,3 +137,75 @@ input,button {
 .bilder{
     width: 40em;
 }
+
+#Editbar {
+    height: 5em;
+}
+
+
+
+#ButtonBack {
+    height: 3em;
+    margin-left: 2.5em;
+    margin-top: 2em;
+}
+
+#EditField {
+    margin-top: 2em;
+    height: 30em;
+}
+
+.BildEdit {
+    height: 30em;
+    width: 30em;
+    margin-left: 10%;
+    float: left;
+    border:black solid 2px;
+}
+
+form * {
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+#BeschreibungInput {
+    width: 20em;
+    height: 20em;
+    max-height: 20em;
+    max-width: 20em;
+    min-height: 10em;
+    min-width: 10em;
+}
+
+#SaveInput:hover {
+    background-color: black;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+#SaveInput {
+    background-color: transparent;
+    margin-top: 30px;
+    border-color: black;
+    width: 10em;
+    height: 4em;
+    border-radius: 5px;
+    float: left;
+}
+
+#DeleteInput {
+     background-color: transparent;
+    margin-top: 30px;
+    border-color: black;
+    width: 10em;
+    height: 4em;
+    border-radius: 5px;
+}
+
+#DeleteInput:hover {
+    background-color: black;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+
