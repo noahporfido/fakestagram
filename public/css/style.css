@@ -48,7 +48,7 @@ body {
 }
 
 #footer {
-    height: 250px;
+    height: 150px;
     position: absolute;
     width: 100%;
     background-image: url(../images/footer.png);
@@ -59,7 +59,7 @@ body {
 
 #footerText {
     text-align: center;
-    margin-top: 12em;
+    margin-top: 7em;
     color: white;
 }
 
@@ -164,38 +164,6 @@ input,button {
 }
 #textHinzufuegen{
 	 font-size: 60px;
-}
-
-.bilder{
-    width: 38em;
-    height: 38em;
-    float: left;
-    background-size: cover;
-    background-position: center center;
-    margin: 0.5em;
-}
-
-#galerie {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 117em;
-}
-
-@media (max-width: 117em){
-    #galerie{
-        width: 78em;
-    }
-}
-
-@media (max-width: 78em){
-    #galerie{
-        width: 39em;
-    }
-}
-
-#galerie_h1 {
-    font-weight: 100;
 }
 
 
