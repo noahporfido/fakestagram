@@ -15,7 +15,7 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <div id="StartseiteContainer">
-    <p id="StartseiteText">fakestagrm</p>
+    <p id="StartseiteText">fakestagram</p>
     <div>
         <input id="BenutzernameLabel" onclick="removePlaceholder(this)" type="text" placeholder="Enter Username" name="uname" required>
     </div>
