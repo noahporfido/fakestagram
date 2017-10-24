@@ -66,6 +66,5 @@ class HomeController
         echo json_encode($arr);
         //$text = $_POST['text'];
     }
-    
-    
-}
+} 
+
