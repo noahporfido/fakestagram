@@ -32,17 +32,16 @@ class BilderRepository extends Repository
     {
         $password = sha1($password);
 
-<<<<<<< HEAD
 
         $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
 
         $query = "INSERT INTO $this->tableName (name, lastName, email, password) VALUES (?, ?, ?, ?)";
 
-=======
+
         $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
 
         $query = "INSERT INTO $this->tableName (name, lastName, email, password) VALUES (?, ?, ?, ?)";
->>>>>>> cfe92a25570a9bc37f4b49cbbe83d70e2cbc8f27
+
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
