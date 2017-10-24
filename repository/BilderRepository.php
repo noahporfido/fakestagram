@@ -28,23 +28,16 @@ class BilderRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    public function create($firstName, $lastName, $email, $password)
+    public function create($name, $beschreibung, $datum, $bild)
     {
-        $password = sha1($password);
+        
 
 
-        $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
-
-        $query = "INSERT INTO $this->tableName (name, lastName, email, password) VALUES (?, ?, ?, ?)";
-
-
-        $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
-
-        $query = "INSERT INTO $this->tableName (name, lastName, email, password) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO $this->tableName (name, name, beschreibung, bild) VALUES (?, ?, ?, ?)";
 
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
+        $statement->bind_param('ssss', $name, $beschreibung, $bild);
 
         if (!$statement->execute()) {
             throw new Exception($statement->error);
