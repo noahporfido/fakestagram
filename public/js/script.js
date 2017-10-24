@@ -5,7 +5,7 @@ function bildshow(id) {
         data: {
             elementid: id
         }
-    }).done(function( json ) {
+    }).done(function() {
      location.reload();
   }).fail(function( xhr, status, errorThrown ) {
     alert(xhr + status + errorThrown);
