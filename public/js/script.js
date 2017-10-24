@@ -12,6 +12,12 @@ function deleteid(id) {
     });
 }
 
-function bildshow(id) {
+function bildshow(id, url, titel, beschreibung) {
+    $("#anzeige_background").show();
+    
+    document.getElementById("anzeige_bild").src = "/uploadimages/" + url;
+    document.getElementById("anzeige_titel").innerHTML = titel;
+    document.getElementById("anzeige_text").innerHTML = beschreibung;
+    
     
 }
