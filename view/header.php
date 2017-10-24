@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
     <script src="/js/script.js"></script>
+    <script src="js/validator.js"></script>
     <script src="/js/hinzufuegen.js"></script>
     <link rel="icon" href="images/logo.png">
 </head>
