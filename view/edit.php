@@ -17,6 +17,6 @@
             <input id="SaveInput" type="submit" name="save" value="Speichern"><br>
             <input id="DeleteInput" type="submit" name="delete" value="Löschen"
 }
-?>"><br>
+?><br>
         </form>
 </div>
