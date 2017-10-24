@@ -14,9 +14,6 @@ function deleteid(id) {
 
 function bildshow(id, url, titel, beschreibung) {
     $("#anzeige_background").show();
-    if($("#anzeige_bild").width() == 0){
-        
-    }
     document.getElementById("anzeige_bild").src = "/uploadimages/" + url;
     document.getElementById("anzeige_titel").innerHTML = titel;
     document.getElementById("anzeige_text").innerHTML = beschreibung;
