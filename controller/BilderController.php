@@ -44,7 +44,7 @@ class BilderController
     	
     	
     	$upload_folder = "uploadimages";
-    	$filename = pathinfo($_FILES["image"]["name"])
+    	$filename = pathinfo($_FILES["image"]["name"]);
     	
     	$bilderRepository->create($name,$beschreibung,$image);
     	

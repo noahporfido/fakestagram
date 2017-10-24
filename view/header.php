@@ -29,7 +29,9 @@
             <h3 id="logo_schrift">Fakestagram</h3>
         </div>
         <img src="/images/profil.png" id="profil">
-        <img src="/images/upload.svg" id="upload">
+        <a href="/hinzufuegen">
+            <img src="/images/upload.svg" id="upload">
+        </a>
         <div id="suche">
             <div id="suchergebnis">
 
