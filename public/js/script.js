@@ -28,6 +28,7 @@ $(document).ready(function () {
     $('#suchenfeld').keyup(function () {
         var text = $("#suchenfeld").val();
         if (text != "") {
+            $("#suchergebnis").show();
             $.ajax({
                 type: "POST",
                 url: "/home/search",
@@ -68,6 +69,9 @@ $(document).ready(function () {
             }).fail(function (xhr, status, errorThrown) {
                 alert(xhr + status + errorThrown);
             });
+        }
+        else{
+            $("#suchergebnis").hide();
         }
         //alert(text);
 

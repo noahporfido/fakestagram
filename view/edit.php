@@ -15,7 +15,7 @@
         <form action='<?php echo "/bilder/update?id=$bild->id" ?>' method="post">
             <input id="NameInput" type="text" required name="name" value="<?php echo $bild->name; ?>"><br>
             <textarea id="BeschreibungInput" name="beschreibung" rows="20" cols="50"><?php echo 
-            $bild->beschreibung; ?>" </textarea>
+            $bild->beschreibung; ?></textarea>
             <input id="SaveInput" type="submit" name="save" value="Speichern"><br>
             <br>
         </form>

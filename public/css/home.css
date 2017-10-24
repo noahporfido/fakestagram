@@ -127,6 +127,7 @@
     background-color: lightgray;
     z-index: 5;
     top: 2em;
+    display: none;
 }
 
 .ergebnis{
