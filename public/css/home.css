@@ -119,3 +119,31 @@
     background-image: url(/images/close.svg);
     background-size: cover;
 }
+
+#suchergebnis {
+    position: absolute;
+    width: 20em;
+    height: 10em;
+    background-color: lightgray;
+    z-index: 5;
+    top: 2em;
+}
+
+.ergebnis{
+    width: 20em;
+    height: 5em;
+    background-color: red;
+}
+
+.ergebnis_bild{
+    width: 5em;
+    float: left;
+}
+
+.ergebnis_titel{
+    margin: 0 0 0 6em;
+}
+
+.ergebnis_text{
+    margin: 0 0 0 6em;
+}
