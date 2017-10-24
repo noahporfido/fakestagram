@@ -35,7 +35,7 @@ class BilderController
     	
     	$name = $_POST['name'];
     	$beschreibung = $_POST['beschreibung'];
-    	$image = $_POST['image'];
+    	$image = $_POST['picture'];
     	
     	$bilderRepository->create($name,$beschreibung,$image);
     	

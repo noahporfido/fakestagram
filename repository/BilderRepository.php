@@ -28,16 +28,16 @@ class BilderRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    public function create($name, $beschreibung, $datum, $bild)
+    public function create($name, $beschreibung, $datum, $picture)
     {
         
 
 
-        $query = "INSERT INTO $this->tableName (name, name, beschreibung, bild) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO $this->tableName (name, beschreibung, bild) VALUES (?, ?, ?, ?)";
 
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('ssss', $name, $beschreibung, $bild);
+        $statement->bind_param('sss', $name, $beschreibung, $bild);
 
         if (!$statement->execute()) {
             throw new Exception($statement->error);
