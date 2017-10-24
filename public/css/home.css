@@ -73,3 +73,29 @@
 #galerie:last-child{
     margin-bottom: 10em;
 }
+#anzeige_background {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+}
+
+#anzeige_titel {
+    font-size: 3em;
+    color: white;
+    font-weight: 100;
+    margin: 0.5em auto 0 auto;
+}
+
+#anzeige_bild {
+    width: 80em;
+}
+
+#anzeige_text {
+    color: white;
+    font-size: 1.5em;
+}
