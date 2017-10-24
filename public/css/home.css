@@ -52,6 +52,7 @@
     height: 5em;
     background-image: url(/images/edit.svg);
     background-size: cover;
+    cursor: pointer;
 }
 
 .ansehen{
@@ -60,6 +61,7 @@
     margin: 3em auto 0 auto;
     background-image: url(/images/show.svg);
     background-size: cover;
+    cursor: pointer;
 }
 
 .delete{
@@ -68,6 +70,7 @@
     margin: 3em auto 0 auto;
     background-image: url(/images/delete.svg);
     background-size: cover;
+    cursor: pointer;
 }
 
 #galerie:last-child{
