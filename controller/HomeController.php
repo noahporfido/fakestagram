@@ -53,7 +53,18 @@ class HomeController
         $id = $_POST['elementid'];
         
         $bilderRepository->deleteById($id);
+    }
+    
+    public function search(){
+        $bilderRepository = new BilderRepository();
+        //var_dump($_POST);
+        $row = $bilderRepository->search($_POST['text']);
         
+        //echo $row;
+        $arr = (array) $row;
+        //var_dump($arr);
+        echo json_encode($arr);
+        //$text = $_POST['text'];
     }
     
     

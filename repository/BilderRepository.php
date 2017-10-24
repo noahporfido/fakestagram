@@ -70,4 +70,38 @@ class BilderRepository extends Repository
         return $statement->insert_id;
     }
     
+    public function search($text){
+        $query = "SELECT * FROM $this->tableName WHERE name like ?";
+        
+
+        // Datenbankverbindung anfordern und, das Query "preparen" (vorbereiten)
+        // und die Parameter "binden"
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $text = "%".$text."%";
+        $statement->bind_param('s', $text);
+
+        // Das Statement absetzen
+        $statement->execute();
+
+        // Resultat der Abfrage holen
+        $result = $statement->get_result();
+        if (!$result) {
+            throw new Exception($statement->error);
+        }
+
+        // Datensätze aus dem Resultat holen und in das Array $rows speichern
+        $rows = array();
+        while ($row = $result->fetch_object()) {
+            $rows[] = $row;
+        }
+
+        // Datenbankressourcen wieder freigeben
+        $result->close();
+
+        // Den gefundenen Datensatz zurückgeben
+        //var_dump($row);
+        return $rows;
+        //return "hallo";
+    }
+    
 }
