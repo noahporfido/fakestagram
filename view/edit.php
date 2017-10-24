@@ -11,12 +11,10 @@
                 }</style>";
         ?>
         <form>
-            <input id="NameInput" type="text" name="name" value="<?php echo $bild->name; ?>"><br>
+            <input id="NameInput" type="text" required name="name" value="<?php echo $bild->name; ?>"><br>
             <textarea id="BeschreibungInput" name="beschreibung" rows="20" cols="50"><?php echo 
             $bild->beschreibung; ?>" </textarea>
             <input id="SaveInput" type="submit" name="save" value="Speichern"><br>
-            <input id="DeleteInput" type="submit" name="delete" value="Löschen"
-}
-?><br>
+            <br>
         </form>
 </div>

@@ -32,7 +32,7 @@ class BilderRepository extends Repository
     {
         $password = sha1($password);
 
-        $query = "INSERT INTO $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
+        $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
@@ -43,4 +43,20 @@ class BilderRepository extends Repository
 
         return $statement->insert_id;
     }
+    
+    public function update($name, $beschreibung)
+    {
+
+        $query = "INSERT INTO $this->tableName (name, beschreibung) VALUES (?, ?)";
+
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
+
+        if (!$statement->execute()) {
+            throw new Exception($statement->error);
+        }
+
+        return $statement->insert_id;
+    }
+    
 }
