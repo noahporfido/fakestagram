@@ -10,12 +10,30 @@
                 }</style>";
                 echo "<div id='element$bild->id' class='bilder'>
                         <div id='option$bild->id' class='option' '>
-                            <div class='edit'></div>
-                            <div class='ansehen'></div>
-                            <div class='delete' onclick='bildshow($bild->id)'></div>
+                            <a href='/bilder/edit?id=$bild->id'>
+                                <div class='edit' ></div>
+                            </a>
+                            <div class='ansehen'onclick='bildshow($bild->id, \"$bild->bild\", \"$bild->name\", \"$bild->beschreibung\")'></div>
+                            <div class='delete' onclick='deleteid($bild->id)'></div>
                         </div>
                     </div>";
                 
             }
         ?>
+        <div id="anzeige_background">
+            <div id="close"></div>
+            <div id="left">
+                <img id="left_img" src="/images/left-arrow.svg">
+            </div>
+            <div id="right">
+                <img id="right_img" src="/images/right-arrow.svg">
+            </div>
+            <div id="anzeige">
+                <h3 id="anzeige_titel">Meer</h3>
+                <img src="/uploadimages/meer.jpg" id="anzeige_bild">
+                <div id="anzeige_text_div">
+                    <p id="anzeige_text">Some Ramdom text 123 bal bal</p>
+                </div>
+            </div>
+        </div>
 </div>

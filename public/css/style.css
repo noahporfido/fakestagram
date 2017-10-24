@@ -251,3 +251,19 @@ form * {
     border-radius: 5px;
     height: 1em;
 }
+
+
+
+#left {
+    width: 10em;
+    height: 20em;
+    float: left;
+    margin-top: 20em;
+}
+
+#right {
+    width: 10em;
+    height: 20em;
+    float: right;
+    margin-top: 20em;
+}
