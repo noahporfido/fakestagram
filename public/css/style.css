@@ -200,6 +200,7 @@ button {
     float: left;
     border: black solid 2px;
     border-radius: 10px;
+    background-position: center center;
 }
 
 form * {
