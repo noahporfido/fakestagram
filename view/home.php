@@ -11,8 +11,8 @@
                 echo "<div id='element$bild->id' class='bilder'>
                         <div id='option$bild->id' class='option' '>
                             <div class='edit'></div>
-                            <div class='ansehen' onclick='bildshow($bild->id)'></div>
-                            <div class='delete'></div>
+                            <div class='ansehen'></div>
+                            <div class='delete' onclick='bildshow($bild->id)'></div>
                         </div>
                     </div>";
                 

@@ -49,8 +49,9 @@ class HomeController
     
     public function delete(){
         $bilderRepository = new BilderRepository();
+      
+        $id = $_POST['elementid'];
         
-        $id = $_POST('elementid');
         $bilderRepository->deleteById($id);
         
     }

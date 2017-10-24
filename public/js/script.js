@@ -3,10 +3,10 @@ function bildshow(id) {
         type: "POST",
         url: "/home/delete",
         data: {
-            elementid: String(id)
+            elementid: id
         }
     }).done(function( json ) {
-     alert(json);
+     location.reload();
   }).fail(function( xhr, status, errorThrown ) {
     alert(xhr + status + errorThrown);
   });
