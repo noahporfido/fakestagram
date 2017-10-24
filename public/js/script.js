@@ -1,13 +1,17 @@
-function bildshow(id) {
+function delete(id) {
     $.ajax({
         type: "POST",
         url: "/home/delete",
         data: {
             elementid: id
         }
-    }).done(function() {
-     location.reload();
-  }).fail(function( xhr, status, errorThrown ) {
-    alert(xhr + status + errorThrown);
-  });
+    }).done(function () {
+        location.reload();
+    }).fail(function (xhr, status, errorThrown) {
+        alert(xhr + status + errorThrown);
+    });
+}
+
+function bildshow(id) {
+    
 }
