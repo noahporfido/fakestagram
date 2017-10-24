@@ -21,7 +21,7 @@
             }
         ?>
         <div id="anzeige_background">
-            <div id="close"></div>
+            <div id="close" onclick="schliessen()"></div>
             <div id="left">
                 <img id="left_img" src="/images/left-arrow.svg">
             </div>

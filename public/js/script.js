@@ -18,6 +18,8 @@ function bildshow(id, url, titel, beschreibung) {
     document.getElementById("anzeige_bild").src = "/uploadimages/" + url;
     document.getElementById("anzeige_titel").innerHTML = titel;
     document.getElementById("anzeige_text").innerHTML = beschreibung;
-    
-    
+}
+
+function schliessen(){
+    $("#anzeige_background").hide();
 }

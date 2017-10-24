@@ -7,6 +7,7 @@ class BilderController
     {
         $bilderRepository = new BilderRepository();
         
+        
         $view = new View('edit');
         $view->title = 'Bild Bearbeiten';
         $view->heading = 'Bild Bearbeiten';
@@ -30,6 +31,19 @@ class BilderController
         $view->bilder = $bilderRepository->readAll();
         $view->display();
         
+    }
+    
+    public function create(){
+    	$bilderRepository = new BilderRepository();
+    	
+    	
+    	$name = $_POST['name'];
+    	$beschreibung = $_POST['beschreibung'];
+    	$image = $_POST['image'];
+    	
+    	$bilderRepository->create($name,$beschreibung,$image);
+    	
+    	
     }
 }
 
