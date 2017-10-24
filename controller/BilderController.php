@@ -25,11 +25,7 @@ class BilderController
         
         $bilderRepository->update($id,$name,$beschreibung);
         
-        $view = new View('home');
-        $view->title = 'Startseite';
-        $view->heading = 'Startseite';
-        $view->bilder = $bilderRepository->readAll();
-        $view->display();
+        header("Location: /home"); 
         
     }
     

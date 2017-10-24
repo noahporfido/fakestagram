@@ -28,6 +28,9 @@
         <img src="/images/profil.png" id="profil">
         <img src="/images/upload.svg" id="upload">
         <div id="suche">
+            <div id="suchergebnis">
+
+            </div>
             <input id="suchenfeld" placeholder="Suchen">
         </div>
     </div>
