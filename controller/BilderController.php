@@ -19,9 +19,9 @@ class BilderController
         
         $bilderRepository = new BilderRepository();
         
-        $id = $_GET['id'];
-        $name = $_POST['name'];
-        $beschreibung = $_POST['beschreibung'];
+        $id = htmlspecialchars($_GET['id']);
+        $name = htmlspecialchars($_POST['name']);
+        $beschreibung = htmlspecialchars($_POST['beschreibung']);
         
         $bilderRepository->update($id,$name,$beschreibung);
         
@@ -33,9 +33,9 @@ class BilderController
     	$bilderRepository = new BilderRepository();
     	
     	
-    	$name = $_POST['name'];
-    	$beschreibung = $_POST['beschreibung'];
-    	$image = $_POST['image'];
+    	$name = htmlspecialchars($_POST['name']);
+    	$beschreibung = htmlspecialchars($_POST['beschreibung']);
+    	$image = htmlspecialchars($_POST['image']);
     	
     	$bilderRepository->create($name,$beschreibung,$image);
     	
