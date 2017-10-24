@@ -21,7 +21,9 @@
 
 <body>
     <div id="navigation">
-        <img src="/images/logo.png" id="logo">
+        <a href="/home">
+            <img src="/images/logo.png" id="logo">
+        </a>
         <div id="logo_schrift_div">
             <h3 id="logo_schrift">Fakestagram</h3>
         </div>
