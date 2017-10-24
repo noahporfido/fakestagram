@@ -1,4 +1,4 @@
-function delete(id) {
+function deleteid(id) {
     $.ajax({
         type: "POST",
         url: "/home/delete",

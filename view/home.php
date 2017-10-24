@@ -1,10 +1,6 @@
 <div id="galerie">
     <h1 id="galerie_h1">Ihre Bildergalerie</h1>
-    <div id="anzeige_background">
-        <div id="anzeige">
-            <h3 id="anzeige"
-        </div>
-    </div>
+    
 
     <?php
             foreach($bilder as $bild){
@@ -18,10 +14,19 @@
                                 <div class='edit' ></div>
                             </a>
                             <div class='ansehen'onclick='bildshow($bild->id)'></div>
-                            <div class='delete' onclick='delete($bild->id)'></div>
+                            <div class='delete' onclick='deleteid($bild->id)'></div>
                         </div>
                     </div>";
                 
             }
         ?>
+    <div id="anzeige_background">
+        <div id="anzeige">
+            <h3 id="anzeige_titel">Meer</h3>
+            <img src="/uploadimages/meer.jpg" id="anzeige_bild">
+            <div id="anzeige_text_div">
+                <p id="anzeige_text">Some Ramdom text 123 bal bal</p>
+            </div>
+        </div>
+    </div>
 </div>
