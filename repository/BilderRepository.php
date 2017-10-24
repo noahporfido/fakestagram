@@ -64,14 +64,14 @@ class BilderRepository extends Repository
     }
     
     public function search($text){
-        $query = "SELECT * FROM $this->tableName WHERE name like ?";
+        $query = "SELECT * FROM $this->tableName WHERE name like ? or beschreibung like ?";
         
 
         // Datenbankverbindung anfordern und, das Query "preparen" (vorbereiten)
         // und die Parameter "binden"
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $text = "%".$text."%";
-        $statement->bind_param('s', $text);
+        $statement->bind_param('ss', $text, $text);
 
         // Das Statement absetzen
         $statement->execute();

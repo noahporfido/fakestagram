@@ -24,9 +24,9 @@ function schliessen() {
 }
 
 $(document).ready(function () {
-    
+    var counter;
     $('.bilder:last').css('margin-bottom', '10em');
-    
+
     $('#suchenfeld').keyup(function () {
         var text = $("#suchenfeld").val();
         if (text != "") {
@@ -38,15 +38,26 @@ $(document).ready(function () {
                     text: text
                 }
             }).success(function (data) {
-                var counter = 1;
+                try {
+                    for (var i = 1; i <= counter; i++) {
+                        
+                        var element = document.getElementById("ergebnis" + i);
+                        element.parentNode.removeChild(element);
+                        console.log(counter);
+                    }
+                } catch (err) {}
+                counter = 0;
+                $("#suchergebnis").css('height','0');
                 var myData = JSON.parse(data);
                 myData.forEach(function (element) {
+                    counter++;
                     var object = document.createElement("div");
                     object.setAttribute("id", "ergebnis" + counter);
                     object.setAttribute("class", "ergebnis");
 
-                    var bild = document.createElement("img");
-                    bild.src = "uploadimages/" + element.bild;
+                    var bild = document.createElement("div");
+                    //bild.src = "/uploadimages/" + element.bild;
+                    bild.style.backgroundImage = "url('/uploadimages/"+element.bild+"')";
                     bild.setAttribute("class", "ergebnis_bild");
                     //alert(test.name);
 
@@ -63,7 +74,7 @@ $(document).ready(function () {
                     object.appendChild(titel);
                     object.appendChild(text);
                     suche.appendChild(object);
-
+                    $("#suchergebnis").css('height', (counter * 6 + 1) + 'em');
                 });
                 //alert(myData.beschreibung);
 
@@ -71,8 +82,7 @@ $(document).ready(function () {
             }).fail(function (xhr, status, errorThrown) {
                 alert(xhr + status + errorThrown);
             });
-        }
-        else{
+        } else {
             $("#suchergebnis").hide();
         }
         //alert(text);

@@ -125,7 +125,7 @@
     position: absolute;
     width: 20em;
     height: 10em;
-    background-color: lightgray;
+    background-color: #f2f2f2;
     z-index: 5;
     top: 2em;
     display: none;
@@ -134,18 +134,24 @@
 .ergebnis{
     width: 20em;
     height: 5em;
-    background-color: red;
+    margin-top: 1em;
 }
 
 .ergebnis_bild{
+    height: 5em;
     width: 5em;
     float: left;
+    background-size: cover;
+    background-position: center center;
+    margin-left: 1em;
+    border-radius: 0.5em;
 }
 
 .ergebnis_titel{
-    margin: 0 0 0 6em;
+    margin: 0 0 0 7em;
 }
 
 .ergebnis_text{
-    margin: 0 0 0 6em;
+    margin: 0.5em 0 0 7em;
+    overflow: hidden;
 }
