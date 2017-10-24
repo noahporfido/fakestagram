@@ -32,11 +32,17 @@ class BilderRepository extends Repository
     {
         $password = sha1($password);
 
+<<<<<<< HEAD
 
         $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
 
         $query = "INSERT INTO $this->tableName (name, lastName, email, password) VALUES (?, ?, ?, ?)";
 
+=======
+        $query = "ALTER TABLE $this->tableName (firstName, lastName, email, password) VALUES (?, ?, ?, ?)";
+
+        $query = "INSERT INTO $this->tableName (name, lastName, email, password) VALUES (?, ?, ?, ?)";
+>>>>>>> cfe92a25570a9bc37f4b49cbbe83d70e2cbc8f27
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
@@ -48,13 +54,15 @@ class BilderRepository extends Repository
         return $statement->insert_id;
     }
     
-    public function update($name, $beschreibung)
+    public function update($id, $name, $beschreibung)
     {
 
-        $query = "INSERT INTO $this->tableName (name, beschreibung) VALUES (?, ?)";
+        $query = "update $this->tableName set name=?, beschreibung=? where id = $id;";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
+        if($statement === false)
+            echo ConnectionHandler::getConnection()->error;
+        $statement->bind_param('ss',$name, $beschreibung);
 
         if (!$statement->execute()) {
             throw new Exception($statement->error);
