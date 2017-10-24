@@ -1,5 +1,5 @@
 <div id="Editbar">
-    <a href="/home">
+    <a href="/home/index">
     <img id="ButtonBack" src="/images/back_arrow.png">
         </a>
 </div>

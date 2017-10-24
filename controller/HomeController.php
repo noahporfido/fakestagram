@@ -55,6 +55,5 @@ class HomeController
         $bilderRepository->deleteById($id);
         
     }
-    
-    
-}
+} 
+
