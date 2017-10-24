@@ -33,9 +33,14 @@ class BilderController
     	$bilderRepository = new BilderRepository();
     	
     	
+
     	$name = htmlspecialchars($_POST['name']);
     	$beschreibung = htmlspecialchars($_POST['beschreibung']);
     	$image = htmlspecialchars($_POST['image']);
+
+    	$name = $_POST['name'];
+    	$beschreibung = $_POST['beschreibung'];
+    	$image = $_POST['picture'];
     	
     	$bilderRepository->create($name,$beschreibung,$image);
     	

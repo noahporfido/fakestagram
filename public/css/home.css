@@ -95,7 +95,8 @@
 }
 
 #anzeige_bild {
-    width: 80em;
+    max-width: 80em;
+    max-height: 50em;
 }
 
 #anzeige_text {
