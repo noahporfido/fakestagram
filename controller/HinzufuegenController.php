@@ -37,8 +37,7 @@ class HinzufuegenController
         //   "default_index" rendern. Wie das genau funktioniert, ist in der
         //   View Klasse beschrieben.
         $view = new View('hinzufuegen');
-        $view->title = 'Startseite';
-        $view->heading = 'Startseite';
+        $view->title = 'Bild hinzufügen';
         $view->display();
     }
 }

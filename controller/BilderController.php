@@ -10,7 +10,6 @@ class BilderController
         
         $view = new View('edit');
         $view->title = 'Bild Bearbeiten';
-        $view->heading = 'Bild Bearbeiten';
         $view->bild = $bilderRepository->readById($_GET["id"]);
         $view->display();
     }
@@ -35,7 +34,8 @@ class BilderController
         $name = htmlspecialchars($_POST['name']);
     	$beschreibung = htmlspecialchars($_POST['beschreibung']);
     	$image = basename($_FILES["image"]["name"]);
-        
+        $view = new View('uploadet');
+        $view->title = "upload";
         
         $target_dir = "uploadimages/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -45,29 +45,38 @@ class BilderController
         if(isset($_POST["submit"])) {
             $check = getimagesize($_FILES["image"]["tmp_name"]);
             if($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
-                echo "File is not an image.";
+                $view->message = 'Die Datei ist kein Bild';
                 $uploadOk = 0;
             }
         }
         
         // Check if file already exists
         if (file_exists($target_file)) {
-            echo "Sorry, file already exists.";
+            $view->message = 'Das Bild existiert bereits';
             $uploadOk = 0;
         }
         
         if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
+            $view->icon = 'error';
+            $view->button = 'Nochmals probieren';
+            $view->display();
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                 $bilderRepository->create($name,$beschreibung,$image);
-                echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+                
+                $view->message = 'Bild erfolgreich hochgeladen';
+                $view->icon = 'success';
+                $view->button = 'Nächstes Bild hochladen';
+                $view->display();
+                
             } else {
-                echo "Sorry, there was an error uploading your file.";
+                $view->message = 'Es gab ein Fehler beim hochladen des bildes';
+                $view->icon = 'error';
+                $view->button = 'Nochmals probieren';
+                $view->display();
             }
         }
         

@@ -84,3 +84,59 @@
 	margin-right:auto;
 	margin-left:auto;
 }
+#upload_content {
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+
+#upload_message {
+    text-align: center;
+}
+
+#upload_buttons {
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+}
+
+.upload_buttons {
+    width: 25em;
+    height: 4em;
+    font-size: 1em;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.5em;
+    display: block;
+    margin-top: 2em;
+}
+
+#success_icon {
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success{
+    background-image: url(/images/success.svg);
+}
+
+.error{
+    background-image: url(/images/error.svg);
+}
+
+
+.upload_buttons:hover {
+    background-color: black;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}

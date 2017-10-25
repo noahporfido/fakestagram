@@ -42,7 +42,6 @@ class HomeController
 
         $view = new View('home');
         $view->title = 'Startseite';
-        $view->heading = 'Startseite';
         $view->bilder = $bilderRepository->readAll();
         $view->display();
     }
