@@ -16,7 +16,7 @@
 				</div>
 				</div>
 				
-				 <br> <input type=submit id="inputPosten" value ="Posten">
+				<br> <input type="submit" id="inputPosten" value ="Posten" name="submit">
 				
 		</form>
 	</div>

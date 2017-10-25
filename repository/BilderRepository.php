@@ -35,12 +35,9 @@ class BilderRepository extends Repository
 
         $query = "INSERT INTO $this->tableName (name, beschreibung, bild) VALUES (?, ?, ?)";
 		
-        $target_dir = "uploadimages/";
-        $target_file = $target_dir . basename( $_FILES["filetoUpload"]["name"]);
-        
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('sss', $name, $beschreibung, $target_file);
+        $statement->bind_param('sss', $name, $beschreibung, $image);
 
         
         
