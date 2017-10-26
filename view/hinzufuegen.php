@@ -6,7 +6,7 @@
         <form action="/Bilder/create" method="post" enctype="multipart/form-data">
             <input type=text id="inputName" placeholder="Name" onclick="removePlaceholder(this)" name="name" required> 
             <br> 
-            <input type=text id="inputBeschreibung" placeholder="Beschreibung" onclick="removePlaceholder(this)" name="beschreibung"> 
+            <textarea type=text id="inputBeschreibung" placeholder="Beschreibung" onclick="removePlaceholder(this)" name="beschreibung" maxlength="100"></textarea>
             <br>
 
 
