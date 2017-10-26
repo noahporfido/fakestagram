@@ -142,25 +142,11 @@ body {
     font-weight: normal;
 }
 
-input,
+
 button {
     border-style: solid;
 }
 
-
-#inputName {
-    border-radius: 5px;
-    border-color: black;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#inputBeschreibung {
-    border-radius: 5px;
-    border-color: black;
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 #inputPosten {
     background-color: transparent;
@@ -212,11 +198,6 @@ button {
     border: black solid 2px;
     border-radius: 10px;
     background-position: center center;
-}
-
-form * {
-    margin-top: 1em;
-    margin-left: 2em;
 }
 
 #BeschreibungInput {

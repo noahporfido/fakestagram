@@ -50,7 +50,6 @@ class HomeController
         $bilderRepository = new BilderRepository();
       
         $id = $_POST['elementid'];
-        
         $bilderRepository->deleteById($id);
     }
     
