@@ -1,4 +1,4 @@
-.bilder{
+.bilder {
     width: 38em;
     height: 38em;
     float: left;
@@ -15,14 +15,14 @@
     width: 117em;
 }
 
-@media (max-width: 117em){
-    #galerie{
+@media (max-width: 117em) {
+    #galerie {
         width: 78em;
     }
 }
 
-@media (max-width: 78em){
-    #galerie{
+@media (max-width: 78em) {
+    #galerie {
         width: 39em;
     }
 }
@@ -31,7 +31,7 @@
     font-weight: 100;
 }
 
-.option{
+.option {
     padding-top: 1px;
     opacity: 0;
     width: 100%;
@@ -39,12 +39,12 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.option:hover{
+.option:hover {
     opacity: 1;
     transition-duration: 0.3s;
 }
 
-.edit{
+.edit {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3em;
@@ -55,7 +55,7 @@
     cursor: pointer;
 }
 
-.ansehen{
+.ansehen {
     width: 15em;
     height: 15em;
     margin: 3em auto 0 auto;
@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-.delete{
+.delete {
     width: 5em;
     height: 5em;
     margin: 3em auto 0 auto;
@@ -73,9 +73,10 @@
     cursor: pointer;
 }
 
-#galerie:last-child{
+#galerie:last-child {
     margin-bottom: 10em;
 }
+
 #anzeige_background {
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
@@ -91,12 +92,54 @@
     font-size: 3em;
     color: white;
     font-weight: 100;
-    margin: 0.5em auto 0 auto;
+    margin: 0.3em auto 0.3em auto;
 }
 
 #anzeige_bild {
-    max-width: 80em;
-    max-height: 50em;
+    max-width: 78em;
+    max-height: 48em;
+}
+
+#left {
+    width: 10em;
+    height: 20em;
+    float: left;
+    margin-top: 20em;
+    cursor: pointer;
+}
+
+#right {
+    width: 10em;
+    height: 20em;
+    float: right;
+    margin-top: 20em;
+    cursor: pointer;
+}
+
+@media (max-width: 100em) {
+    #anzeige_bild {
+        max-width: 60em;
+    }
+}
+
+@media (max-width: 81em) {
+    #anzeige_bild {
+        max-width: 50em;
+    }
+    #left {
+        width: 5em;
+    }
+    
+    #right{
+        width: 5em;
+    }
+}
+
+@media (max-width: 61em) {
+    #anzeige_bild {
+        max-width: 40em;
+    }
+    #left {}
 }
 
 #anzeige_text {
@@ -122,6 +165,7 @@
     height: 3em;
     background-image: url(/images/close.svg);
     background-size: cover;
+    cursor: pointer;
 }
 
 #suchergebnis {
@@ -134,13 +178,13 @@
     display: none;
 }
 
-.ergebnis{
+.ergebnis {
     width: 20em;
     height: 5em;
     margin-top: 1em;
 }
 
-.ergebnis_bild{
+.ergebnis_bild {
     height: 5em;
     width: 5em;
     float: left;
@@ -150,11 +194,11 @@
     border-radius: 0.5em;
 }
 
-.ergebnis_titel{
+.ergebnis_titel {
     margin: 0 0 0 7em;
 }
 
-.ergebnis_text{
+.ergebnis_text {
     margin: 0.5em 0 0 7em;
     overflow: hidden;
 }
