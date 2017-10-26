@@ -14,6 +14,8 @@ function deleteid(id) {
 
 function bildshow(id, url, titel, beschreibung) {
     $("#anzeige_background").show();
+    $("#suchergebnis").hide();
+    document.getElementById("suchenfeld").value = "";
     document.getElementById("anzeige_bild").src = "/uploadimages/" + url;
     document.getElementById("anzeige_titel").innerHTML = titel;
     document.getElementById("anzeige_text").innerHTML = beschreibung;
@@ -66,6 +68,7 @@ $(document).ready(function () {
                     counter++;
                     var object = document.createElement("div");
                     object.setAttribute("id", "ergebnis" + counter);
+                    object.setAttribute("onclick", "bildshow('" + element.id +"','" + element.bild + "','" + element.name + "','" + element.beschreibung + "')");
                     object.setAttribute("class", "ergebnis");
 
                     var bild = document.createElement("div");
