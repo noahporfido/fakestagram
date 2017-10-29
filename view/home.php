@@ -29,10 +29,10 @@
                 <img id="right_img" src="/images/right-arrow.svg" onclick="next(0)">
             </div>
             <div id="anzeige">
-                <h3 id="anzeige_titel">Meer</h3>
+                <h3 id="anzeige_titel"></h3>
                 <img src="/uploadimages/meer.jpg" id="anzeige_bild">
                 <div id="anzeige_text_div">
-                    <p id="anzeige_text">Some Ramdom text 123 bal bal</p>
+                    <p id="anzeige_text"></p>
                 </div>
             </div>
         </div>
