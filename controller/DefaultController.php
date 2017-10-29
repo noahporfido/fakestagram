@@ -1,5 +1,5 @@
 <?php
-
+    require_once '../repository/BilderRepository.php';
 /**
  * Der Controller ist der Ort an dem es für jede Seite, welche der Benutzer
  * anfordern kann eine Methode gibt, welche die dazugehörende Businesslogik
@@ -36,9 +36,12 @@ class DefaultController
         // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
         //   "default_index" rendern. Wie das genau funktioniert, ist in der
         //   View Klasse beschrieben.
-        $view = new View('default_index');
+        $bilderRepository = new BilderRepository();
+        //$userRepository = new UserRepository();
+
+        $view = new View('home');
         $view->title = 'Startseite';
-        $view->heading = 'Startseite';
-        $view->displayfrontpage();
+        $view->bilder = $bilderRepository->readAll();
+        $view->display();
     }
 }

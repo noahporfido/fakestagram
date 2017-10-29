@@ -1,7 +1,7 @@
 function deleteid(id) {
     $.ajax({
         type: "POST",
-        url: "/home/delete",
+        url: "/bild/delete",
         data: {
             elementid: id
         }
@@ -12,22 +12,27 @@ function deleteid(id) {
     });
 }
 
+var angezeigtesBild;
+
 function bildshow(id, url, titel, beschreibung) {
+    angezeigtesBild = id;
     $("#anzeige_background").show();
     $("#suchergebnis").hide();
     document.getElementById("suchenfeld").value = "";
     document.getElementById("anzeige_bild").src = "/uploadimages/" + url;
     document.getElementById("anzeige_titel").innerHTML = titel;
     document.getElementById("anzeige_text").innerHTML = beschreibung;
+    bildanpassen();
+}
 
-    
+function bildanpassen(){
     if ($("#anzeige_bild").height() > $("#anzeige_bild").width()) {
         if ($("#anzeige_bild").height() < 780) {
             $("#anzeige_bild").css('min-height', '48em');
         }
-    }else{
+    } else {
         if ($("#anzeige_bild").height() < 780) {
-            $("#anzeige").css('margin-top', ((800 - $("#anzeige_bild").height()) / 2)+"px");
+            $("#anzeige").css('margin-top', ((800 - $("#anzeige_bild").height()) / 2) + "px");
         }
     }
 }
@@ -48,7 +53,7 @@ $(document).ready(function () {
             $("#suchergebnis").show();
             $.ajax({
                 type: "POST",
-                url: "/home/search",
+                url: "/bild/search",
                 data: {
                     text: text
                 }
@@ -68,7 +73,7 @@ $(document).ready(function () {
                     counter++;
                     var object = document.createElement("div");
                     object.setAttribute("id", "ergebnis" + counter);
-                    object.setAttribute("onclick", "bildshow('" + element.id +"','" + element.bild + "','" + element.name + "','" + element.beschreibung + "')");
+                    object.setAttribute("onclick", "bildshow('" + element.id + "','" + element.bild + "','" + element.name + "','" + element.beschreibung + "')");
                     object.setAttribute("class", "ergebnis");
 
                     var bild = document.createElement("div");
@@ -105,3 +110,40 @@ $(document).ready(function () {
 
     });
 });
+
+function next(upordown) {
+    $.ajax({
+        type: "POST",
+        url: "/bild/next",
+        data: {
+            id: angezeigtesBild
+        }
+    }).success(function (data) {
+        counter = 0;
+        nextimage = 0;
+        var myData = JSON.parse(data);
+        myData.forEach(function (element) {
+            //console.log(myData[counter-1].id);
+            counter++;
+            //console.log(myData[counter-1].id);
+            if (element.id == angezeigtesBild) {
+                nextimage = counter + upordown;
+            }
+        });
+        if (counter == nextimage) {
+            angezeigtesBild = myData[0].id;
+            nextimage = 0;
+        }else if(nextimage < 0){
+            nextimage = counter-1;
+        }
+        $("#anzeige_titel").html(myData[nextimage].name);
+        $("#anzeige_text").text(myData[nextimage].beschreibung);
+        $("#anzeige_bild").attr('src', '/uploadimages/' + myData[nextimage].bild);
+        $("#anzeige_bild").css('min-height', '0');
+        $("#anzeige").css('margin-top', '0');
+        bildanpassen();
+        angezeigtesBild = myData[nextimage].id;
+    }).fail(function (xhr, status, errorThrown) {
+        alert(xhr + status + errorThrown);
+    });
+}

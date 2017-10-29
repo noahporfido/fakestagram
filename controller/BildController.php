@@ -1,7 +1,7 @@
 <?php
     require_once '../repository/BilderRepository.php';
 
-class BilderController
+class BildController
 { 
     public function edit()
     {
@@ -24,7 +24,7 @@ class BilderController
         
         $bilderRepository->update($id,$name,$beschreibung);
         
-        header("Location: /home"); 
+        header("Location: /"); 
         
     }
     
@@ -79,11 +79,43 @@ class BilderController
                 $view->display();
             }
         }
+    }
+    
+    public function hinzufuegen()
+    {
+        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
+        //   "default_index" rendern. Wie das genau funktioniert, ist in der
+        //   View Klasse beschrieben.
+        $view = new View('hinzufuegen');
+        $view->title = 'Bild hinzufügen';
+        $view->display();
+    }
+    
+    public function delete(){
+        $bilderRepository = new BilderRepository();
+      
+        $id = $_POST['elementid'];
+        $bilderRepository->deleteById($id);
+    }
+    
+    public function search(){
+        $bilderRepository = new BilderRepository();
+        //var_dump($_POST);
+        $row = $bilderRepository->search($_POST['text']);
         
-    	
-    	
-    	
-    	
+        //echo $row;
+        $arr = (array) $row;
+        //var_dump($arr);
+        echo json_encode($arr);
+        //$text = $_POST['text'];
+    }
+    
+    public function next(){
+        $bilderRepository = new BilderRepository();
+        $row = $bilderRepository->readAll();
+        $arr = (array) $row;
+        echo json_encode($arr);
+        
     }
 }
 

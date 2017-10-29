@@ -22,14 +22,14 @@
 
 <body>
     <div id="navigation">
-        <a href="/home">
+        <a href="/">
             <img src="/images/logo.png" id="logo">
         </a>
         <div id="logo_schrift_div">
             <h3 id="logo_schrift">Fakestagram</h3>
         </div>
         <img src="/images/profil.png" id="profil">
-        <a href="/hinzufuegen">
+        <a href="/bild/hinzufuegen">
             <img src="/images/upload.svg" id="upload">
         </a>
         <div id="suche">

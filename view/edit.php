@@ -1,5 +1,5 @@
 <div id="Editbar">
-    <a href="/home/index">
+    <a href="/">
     <img id="ButtonBack" src="/images/back_arrow.png">
         </a>
 </div>
@@ -12,7 +12,7 @@
                     background-image: url('/uploadimages/$bild->bild'); 
                 }</style>";
         ?>
-        <form action='<?php echo "/bilder/update?id=$bild->id" ?>' method="post">
+        <form action='<?php echo "/bild/update?id=$bild->id" ?>' method="post">
             <input id="NameInput" type="text" required name="name" maxlength="20" value="<?php echo $bild->name; ?>"><br>
             <textarea id="BeschreibungInput" maxlength="100" name="beschreibung" rows="20" cols="50"><?php echo 
             $bild->beschreibung; ?></textarea>
