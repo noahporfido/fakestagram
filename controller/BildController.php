@@ -93,8 +93,10 @@ class BildController
     
     public function delete(){
         $bilderRepository = new BilderRepository();
-      
+        
         $id = $_POST['elementid'];
+        $name = $bilderRepository->readById($id);
+        unlink("uploadimages/$name->bild");
         $bilderRepository->deleteById($id);
     }
     

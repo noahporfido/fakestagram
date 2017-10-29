@@ -5,7 +5,7 @@ function deleteid(id) {
         data: {
             elementid: id
         }
-    }).done(function () {
+    }).success(function () {
         location.reload();
     }).fail(function (xhr, status, errorThrown) {
         alert(xhr + status + errorThrown);

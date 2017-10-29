@@ -40,7 +40,7 @@ class DefaultController
         //$userRepository = new UserRepository();
 
         $view = new View('home');
-        $view->title = 'Startseite';
+        $view->title = 'Fakestagram';
         $view->bilder = $bilderRepository->readAll();
         $view->display();
     }
