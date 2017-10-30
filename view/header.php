@@ -6,7 +6,7 @@
     <title>
         <?= $title ?>
     </title>
-    <!-- Custom styles for this template -->
+    <!-- Custom styles and Script link for the Website -->
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/celine.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div id="navigation">
+    <div id="navigation"> <!--Navigation with Logo and Buttons-->
         <a href="/">
             <img src="/images/logo.png" id="logo">
         </a>
@@ -39,7 +39,7 @@
             <input id="suchenfeld" placeholder="Suchen">
         </div>
     </div>
-    <div id="anzeige_background">
+    <div id="anzeige_background"> <!--Show Picture in Fullscreen Display-->
         <div id="close" onclick="schliessen()"></div>
         <div id="left">
             <img id="left_img" src="/images/left-arrow.svg" onclick="next(-2)">
