@@ -3,6 +3,7 @@
 
 
     <?php
+            //generiert für jedes Bild eine Kachel mit den Entsprechenden spezifikationen
             foreach($bilder as $bild){
                 echo "<style type='text/css'>";
                 echo "#element$bild->id {

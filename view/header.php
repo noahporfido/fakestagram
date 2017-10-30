@@ -6,7 +6,7 @@
     <title>
         <?= $title ?>
     </title>
-    <!-- Custom styles for this template -->
+    <!-- alle Script und Styles werden eingebunden -->
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/celine.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <!-- Header Balken mit suchfunktion -->
     <div id="navigation">
         <a href="/">
             <img src="/images/logo.png" id="logo">
@@ -42,6 +43,8 @@
             <input id="suchenfeld">
         </div>
     </div>
+    
+    <!-- Damit die Suche überall funktioniert wird der HTML Coder für die Bildanzeige direkt in den header eingebunden -->
     <div id="anzeige_background">
         <div id="close" onclick="schliessen()"></div>
         <div id="left">

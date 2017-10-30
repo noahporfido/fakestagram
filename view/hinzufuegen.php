@@ -4,7 +4,7 @@
         <form action="/bild/create" method="post" enctype="multipart/form-data">
             <input type=text id="inputName" placeholder="Name" name="name" required>
             <textarea type=text id="inputBeschreibung" placeholder="Beschreibung" name="beschreibung" maxlength="100"></textarea>
-            <input type="file" id="inputBild" name="image" required onchange="readURL(this);"/>
+            <input type="file" id="inputBild" name="image" required onchange="vorschau(this);"/>
             <div id="labelBild" onclick="file()">
                 <div id="divBackground">
                 </div>
