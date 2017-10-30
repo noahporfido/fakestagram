@@ -110,7 +110,7 @@ $(document).ready(function () {
 
     });
 
-    $("input").focus(function () {
+    $("#suchenfeld").focus(function () {
         console.log("in");
         $("#placeholder").animate({
             top: "-0.5em",
@@ -125,7 +125,7 @@ $(document).ready(function () {
         });
     });
 
-    $("input").focusout(function () {
+    $("#suchenfeld").focusout(function () {
         console.log("out");
         $("#placeholder").animate({
             top: "0.5em",
@@ -180,4 +180,23 @@ function next(upordown) {
 
 function suchenclick() {
     $("#suchenfeld").focus();
+}
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#bildvorschau')
+                .attr('src', e.target.result)
+        };
+        $("#labelBild").hide();
+        reader.readAsDataURL(input.files[0]);
+
+        function test() {
+            var height = $("#bildvorschau").height();
+            $("#bild_aendern").css("margin-top", (height / 2 - 15) + "px");
+        }
+        setTimeout(test, 50);
+    }
 }
