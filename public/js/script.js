@@ -1,3 +1,4 @@
+// ruhft eine php datei auf, die das Bild löscht
 function deleteid(id) {
     $.ajax({
         type: "POST",
@@ -6,14 +7,18 @@ function deleteid(id) {
             elementid: id
         }
     }).success(function () {
+        // nach dem Löschen wird die seite Neu geladen
         location.reload();
     }).fail(function (xhr, status, errorThrown) {
         alert(xhr + status + errorThrown);
     });
 }
 
+// speichert die ID des momentan angezeigen Bildes, damit bei der Next funktion auch das richtige nächste BIld dargestellt wird.
 var angezeigtesBild;
 
+// Zeigt das angecklikte Bild in gross dar
+// Titel und Beschreibung wird ober und unter dem Bild auch dargestellt
 function bildshow(id, url, titel, beschreibung) {
     angezeigtesBild = id;
     $("#anzeige_background").show();
@@ -25,6 +30,7 @@ function bildshow(id, url, titel, beschreibung) {
     bildanpassen();
 }
 
+// ändert die grösse des Bildes valls es zu klein oder gross ist und positioniert es in der Mitte
 function bildanpassen() {
     if ($("#anzeige_bild").height() > $("#anzeige_bild").width()) {
         if ($("#anzeige_bild").height() < 780) {
@@ -37,6 +43,7 @@ function bildanpassen() {
     }
 }
 
+// schliesst die Vorschau des Bildes
 function schliessen() {
     $("#anzeige_background").hide();
     $("#anzeige_bild").css('min-height', '0');
@@ -45,12 +52,14 @@ function schliessen() {
 
 $(document).ready(function () {
     var counter;
+    //das letzte Bild soll unten ein Abstand haben, damit der Footer nicht über die BIlder kommt.
     $('.bilder:last').css('margin-bottom', '10em');
 
+    //jedes mal wenn etwas im suchfeld geändert wird führt es diese fuktion aus
     $('#suchenfeld').keyup(function () {
         var text = $("#suchenfeld").val();
         if (text != "") {
-            $("#suchergebnis").show();
+            // stellt eine Verbindung zu einem PHP dokument her und erhält alle Bilder die den eingegebenen String enthalten.
             $.ajax({
                 type: "POST",
                 url: "/bild/search",
@@ -58,6 +67,7 @@ $(document).ready(function () {
                     text: text
                 }
             }).success(function (data) {
+                // löscht falls vorhanden die vorherigen suchergebnise
                 try {
                     for (var i = 1; i <= counter; i++) {
 
@@ -67,8 +77,12 @@ $(document).ready(function () {
                     }
                 } catch (err) {}
                 counter = 0;
+                $("#suchergebnis").show();
                 $("#suchergebnis").css('height', '0');
                 var myData = JSON.parse(data);
+                
+                // Für die fuktion so oft aus wie es suchergebnisse hat
+                // und generiert die Elemente mit dem Entsprechenden Inhalt und fügt sie in den HTML code ein
                 myData.forEach(function (element) {
                     counter++;
                     var object = document.createElement("div");
@@ -77,10 +91,8 @@ $(document).ready(function () {
                     object.setAttribute("class", "ergebnis");
 
                     var bild = document.createElement("div");
-                    //bild.src = "/uploadimages/" + element.bild;
                     bild.style.backgroundImage = "url('/uploadimages/" + element.bild + "')";
                     bild.setAttribute("class", "ergebnis_bild");
-                    //alert(test.name);
 
                     var titel = document.createElement("h4");
                     titel.innerHTML = element.name;
@@ -97,19 +109,15 @@ $(document).ready(function () {
                     suche.appendChild(object);
                     $("#suchergebnis").css('height', (counter * 6 + 1) + 'em');
                 });
-                //alert(myData.beschreibung);
-
-                //alert(data);
             }).fail(function (xhr, status, errorThrown) {
                 alert(xhr + status + errorThrown);
             });
         } else {
             $("#suchergebnis").hide();
         }
-        //alert(text);
-
     });
 
+    // Wenn auf das suchfeld geklickt wird wird die animation ausgelöst
     $("#suchenfeld").focus(function () {
         console.log("in");
         $("#placeholder").animate({
@@ -125,6 +133,7 @@ $(document).ready(function () {
         });
     });
 
+    // Wenn das Suchfeld verlassen wird löst es die Animation aus
     $("#suchenfeld").focusout(function () {
         console.log("out");
         $("#placeholder").animate({
@@ -141,6 +150,7 @@ $(document).ready(function () {
     })
 });
 
+// Zeigt das nächste Bild an
 function next(upordown) {
     $.ajax({
         type: "POST",
@@ -152,20 +162,22 @@ function next(upordown) {
         counter = 0;
         nextimage = 0;
         var myData = JSON.parse(data);
+        // schaut welches Bild as nächstes an der reihe ist
+        // wenn das vorherige Bild angezeigt werden soll rechnet es einfach mit der Variable uüprdown -2, damit auch wirklich das vorherige Bild angezeigt wird
         myData.forEach(function (element) {
-            //console.log(myData[counter-1].id);
             counter++;
-            //console.log(myData[counter-1].id);
             if (element.id == angezeigtesBild) {
                 nextimage = counter + upordown;
             }
         });
+        // wenn es das erste oder letzt Bild ist muss es wieder zum anfang oder zum schluss springen
         if (counter == nextimage) {
             angezeigtesBild = myData[0].id;
             nextimage = 0;
         } else if (nextimage < 0) {
             nextimage = counter - 1;
         }
+        // Bild und text wird geändert
         $("#anzeige_titel").html(myData[nextimage].name);
         $("#anzeige_text").text(myData[nextimage].beschreibung);
         $("#anzeige_bild").attr('src', '/uploadimages/' + myData[nextimage].bild);
@@ -178,11 +190,13 @@ function next(upordown) {
     });
 }
 
+// Wenn man auf den Text "suchen" klickt vokusiert es das input element
 function suchenclick() {
     $("#suchenfeld").focus();
 }
 
-function readURL(input) {
+// nachdem man beim hochladen ein Bild ausgewählt hat wird es direkt in einer kleine Vorschau angezeigt
+function vorschau(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
