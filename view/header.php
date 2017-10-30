@@ -6,7 +6,11 @@
     <title>
         <?= $title ?>
     </title>
+<<<<<<< HEAD
     <!-- alle Script und Styles werden eingebunden -->
+=======
+    <!-- Custom styles and Script link for the Website -->
+>>>>>>> ebd20a1dbc00a4075113f8e420f6d49b96c359ff
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/celine.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
@@ -22,8 +26,12 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <!-- Header Balken mit suchfunktion -->
     <div id="navigation">
+=======
+    <div id="navigation"> <!--Navigation with Logo and Buttons-->
+>>>>>>> ebd20a1dbc00a4075113f8e420f6d49b96c359ff
         <a href="/">
             <img src="/images/logo.png" id="logo">
         </a>
@@ -43,9 +51,13 @@
             <input id="suchenfeld">
         </div>
     </div>
+<<<<<<< HEAD
     
     <!-- Damit die Suche überall funktioniert wird der HTML Coder für die Bildanzeige direkt in den header eingebunden -->
     <div id="anzeige_background">
+=======
+    <div id="anzeige_background"> <!--Show Picture in Fullscreen Display-->
+>>>>>>> ebd20a1dbc00a4075113f8e420f6d49b96c359ff
         <div id="close" onclick="schliessen()"></div>
         <div id="left">
             <img id="left_img" src="/images/left-arrow.svg" onclick="next(-2)">

@@ -14,6 +14,7 @@
     <script src="/js/script.js"></script>
     <link rel="icon" href="images/logo.png">
 </head>
+<!--Home Display need own head because Header wont be displayed -->
 <div id="StartseiteContainer">
     <p id="StartseiteText">fakestagram</p>
     <form id="Login" method="post" accept-charset="UTF-8" action="/home/login">

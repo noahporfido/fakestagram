@@ -17,7 +17,7 @@ class BildController
         
         $bilderRepository = new BilderRepository();
         
-        $id = htmlspecialchars($_GET['id']);
+        $id = htmlspecialchars($_GET['id']); //htmlspecialcharsf secure against 
         $name = htmlspecialchars($_POST['name']);
         $beschreibung = htmlspecialchars($_POST['beschreibung']);
         
