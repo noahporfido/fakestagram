@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/validator.js"></script>
     <script src="/js/hinzufuegen.js"></script>
@@ -36,7 +37,9 @@
             <div id="suchergebnis">
 
             </div>
-            <input id="suchenfeld" placeholder="Suchen">
+            <p id="placeholder" onclick="suchenclick()" >Suchen</p>
+            <div id="border"></div>
+            <input id="suchenfeld">
         </div>
     </div>
     <div id="anzeige_background">

@@ -112,10 +112,32 @@ $(document).ready(function () {
 
     $("input").focus(function () {
         console.log("in");
+        $("#placeholder").animate({
+            top: "-0.5em",
+            fontSize: "0.8em"
+        }, {
+            duration: 100
+        });
+        $("#border").animate({
+            width: "102%"
+        }, {
+            duration: 100
+        });
     });
 
     $("input").focusout(function () {
         console.log("out");
+        $("#placeholder").animate({
+            top: "0.5em",
+            fontSize: "1em"
+        }, {
+            duration: 100
+        });
+        $("#border").animate({
+            width: "0%"
+        }, {
+            duration: 100
+        });
     })
 });
 
@@ -154,4 +176,8 @@ function next(upordown) {
     }).fail(function (xhr, status, errorThrown) {
         alert(xhr + status + errorThrown);
     });
+}
+
+function suchenclick() {
+    $("#suchenfeld").focus();
 }
