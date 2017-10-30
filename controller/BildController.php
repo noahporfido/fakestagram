@@ -3,41 +3,45 @@
 
 class BildController
 { 
+    // Element Bearpeiten
     public function edit()
     {
         $bilderRepository = new BilderRepository();
         
         $view = new View('edit');
         $view->title = 'Bild Bearbeiten';
-        $view->bild = $bilderRepository->readById($_GET["id"]);
+        $view->bild = $bilderRepository->readById(htmlspecialchars($_GET["id"]));
         $view->display();
     }
     
+    // update element in DB
     public function update(){
         
         $bilderRepository = new BilderRepository();
         
-        $id = htmlspecialchars($_GET['id']); //htmlspecialcharsf secure against 
+        $id = htmlspecialchars($_GET['id']); //htmlspecialchars secure against 
         $name = htmlspecialchars($_POST['name']);
         $beschreibung = htmlspecialchars($_POST['beschreibung']);
         
         $bilderRepository->update($id,$name,$beschreibung);
         
+        // weiterleitung zur startseite
         header("Location: /"); 
         
     }
     
+    // upload img and insert into DB
     public function create(){
     	$bilderRepository = new BilderRepository();
     	
         $name = htmlspecialchars($_POST['name']);
     	$beschreibung = htmlspecialchars($_POST['beschreibung']);
-    	$image = basename($_FILES["image"]["name"]);
+    	$image = htmlspecialchars(basename($_FILES["image"]["name"]));
         $view = new View('uploadet');
         $view->title = "upload";
         
         $target_dir = "uploadimages/";
-        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        $target_file = $target_dir . htmlspecialchars(basename($_FILES["image"]["name"]));
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         // Check if image file is a actual image or fake image
@@ -80,6 +84,7 @@ class BildController
         }
     }
     
+    // Neues Element hinzufügen
     public function hinzufuegen()
     {
         // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
@@ -90,6 +95,7 @@ class BildController
         $view->display();
     }
     
+    // delete file in DB and explorer
     public function delete(){
         $bilderRepository = new BilderRepository();
         
@@ -99,6 +105,7 @@ class BildController
         $bilderRepository->deleteById($id);
     }
     
+    // search by string
     public function search(){
         $bilderRepository = new BilderRepository();
         //var_dump($_POST);
@@ -111,6 +118,7 @@ class BildController
         //$text = $_POST['text'];
     }
     
+    // liefert alle ergebnisse die in der Tabelle sind, damit im javascritp das nächste ausgewählt werden kann
     public function next(){
         $bilderRepository = new BilderRepository();
         $row = $bilderRepository->readAll();

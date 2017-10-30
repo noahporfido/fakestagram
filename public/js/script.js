@@ -214,3 +214,8 @@ function vorschau(input) {
         setTimeout(test, 50);
     }
 }
+
+// Bei click auf das + wird ein click auf den uploadbutton simuliert
+function file(){
+	document.getElementById("inputBild").click();
+}
