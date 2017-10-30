@@ -30,6 +30,8 @@ input, button, textarea{
     padding-top: 1px;
     border-width: thin;
     box-shadow: 0 0 1em gray;
+    width: 100%;
+    top: 0;
 }
 
 #profil {

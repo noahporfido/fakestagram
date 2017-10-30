@@ -23,6 +23,9 @@ class BildController
         $name = htmlspecialchars($_POST['name']);
         $beschreibung = htmlspecialchars($_POST['beschreibung']);
         
+        $name = preg_replace('/[^A-Za-z0-9\-.!?äöüÄÜÖ ]/', '', $name);
+        $beschreibung = preg_replace('/[^A-Za-z0-9\-.!?äöüÄÜÖ ]/', '', $beschreibung);
+        
         $bilderRepository->update($id,$name,$beschreibung);
         
         // weiterleitung zur startseite
@@ -39,6 +42,11 @@ class BildController
     	$image = htmlspecialchars(basename($_FILES["image"]["name"]));
         $view = new View('uploadet');
         $view->title = "upload";
+        
+        // Removes special chars.
+        $beschreibung = preg_replace('/[^A-Za-z0-9\-.!?äöüÄÜÖ ]/', '', $beschreibung); 
+        $name = preg_replace('/[^A-Za-z0-9\-.!?äöüÄÜÖ ]/', '', $name);
+        
         
         $target_dir = "uploadimages/";
         $target_file = $target_dir . htmlspecialchars(basename($_FILES["image"]["name"]));
