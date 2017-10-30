@@ -19,7 +19,9 @@ body {
 }
 
 #navigation {
-    background-color: white;
+    background-image: url(/images/Background5.jpg);
+    background-size: cover;
+    background-position: center center;
     height: 5em;
     padding-top: 1px;
     border-width: thin;
@@ -38,10 +40,10 @@ body {
     height: 1.8em;
     font-size: 1em;
     text-align: center;
-    border-radius: 0.5em;
-    border-color: lightgray;
-    border-style: solid;
-    border-width: thin;
+    border-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: transparent;
 }
 
 @media (max-width: 56em){
@@ -251,3 +253,7 @@ button {
 
 
 
+
+input:focus {
+    outline: none;
+}
