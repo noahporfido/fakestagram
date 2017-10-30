@@ -110,12 +110,34 @@ $(document).ready(function () {
 
     });
 
-    $("input").focus(function () {
+    $("#suchenfeld").focus(function () {
         console.log("in");
+        $("#placeholder").animate({
+            top: "-0.5em",
+            fontSize: "0.8em"
+        }, {
+            duration: 100
+        });
+        $("#border").animate({
+            width: "102%"
+        }, {
+            duration: 100
+        });
     });
 
-    $("input").focusout(function () {
+    $("#suchenfeld").focusout(function () {
         console.log("out");
+        $("#placeholder").animate({
+            top: "0.5em",
+            fontSize: "1em"
+        }, {
+            duration: 100
+        });
+        $("#border").animate({
+            width: "0%"
+        }, {
+            duration: 100
+        });
     })
 });
 
@@ -154,4 +176,27 @@ function next(upordown) {
     }).fail(function (xhr, status, errorThrown) {
         alert(xhr + status + errorThrown);
     });
+}
+
+function suchenclick() {
+    $("#suchenfeld").focus();
+}
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#bildvorschau')
+                .attr('src', e.target.result)
+        };
+        $("#labelBild").hide();
+        reader.readAsDataURL(input.files[0]);
+
+        function test() {
+            var height = $("#bildvorschau").height();
+            $("#bild_aendern").css("margin-top", (height / 2 - 15) + "px");
+        }
+        setTimeout(test, 50);
+    }
 }
