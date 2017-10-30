@@ -25,7 +25,7 @@ function bildshow(id, url, titel, beschreibung) {
     bildanpassen();
 }
 
-function bildanpassen(){
+function bildanpassen() {
     if ($("#anzeige_bild").height() > $("#anzeige_bild").width()) {
         if ($("#anzeige_bild").height() < 780) {
             $("#anzeige_bild").css('min-height', '48em');
@@ -109,6 +109,14 @@ $(document).ready(function () {
         //alert(text);
 
     });
+
+    $("input").focus(function () {
+        console.log("in");
+    });
+
+    $("input").focusout(function () {
+        console.log("out");
+    })
 });
 
 function next(upordown) {
@@ -133,8 +141,8 @@ function next(upordown) {
         if (counter == nextimage) {
             angezeigtesBild = myData[0].id;
             nextimage = 0;
-        }else if(nextimage < 0){
-            nextimage = counter-1;
+        } else if (nextimage < 0) {
+            nextimage = counter - 1;
         }
         $("#anzeige_titel").html(myData[nextimage].name);
         $("#anzeige_text").text(myData[nextimage].beschreibung);
